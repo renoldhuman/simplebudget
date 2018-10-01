@@ -25,8 +25,7 @@ class LoginScreen extends Component{
 	}
 
 
-	handleLogin(userPassword){
-		console.log(userPassword);
+	handleLogin(uName, uPassword){
 		const that = this;
 		// fetch('/users',
 		// {
@@ -71,17 +70,20 @@ class LoginScreen extends Component{
 					// });
 		
 		//})
-		fetch('users')
+
+		fetch('/users/' + uName +"/"+uPassword)
 		.then(response => {
 			response.json()
 			.then(data => {
 				var newCategories = [];
-				var newUser = new userBalance(that.state.userName, newCategories, data.discretionary);
+				var newUser = new userBalance(data.username, newCategories, data.discretionary);
 				for (var i = 0; i < data.categories.length; i++)
 				{
 					newUser.addCategory(data.categories[i].categoryName, data.categories[i].allocation);
 				}
-				that.setState({
+
+				//console.log(newUser.name);
+				this.setState({
 					loggedIn: true,
 					userBalance: newUser
 				});

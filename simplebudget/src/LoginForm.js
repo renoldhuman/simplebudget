@@ -27,7 +27,7 @@ class LoginForm extends Component{
 
 	handleLogin(){
 		console.log("Log In initiated");
-		this.props.handleLogin(this.state.password);
+		this.props.handleLogin(this.state.userName, this.state.password);
 	}
 
 	handleSignUp(){
@@ -36,20 +36,12 @@ class LoginForm extends Component{
 
 	render(){
 		return(
-			<div className = "CategoryForm">
-				<form onSubmit={this.handleLogin}>
-        			<label>
-          				Username:
-          				<input type="text" value={this.state.userName} onChange={this.handleNameChange}/>
-        			</label>
-        			<label>
-        				Password:
-        				<input type="password" value={this.state.password} onChange={this.handlePasswordChange}/>
-        			</label>
-        			<input type="submit" value="Login" />
-        			<button onClick={this.handleSignUp}>Sign Up</button>
-     			 </form>
-     		</div>
+			<div>
+				<input type="text" value={this.state.userName} onChange={this.handleNameChange}/>
+				<input type="password" value={this.state.password} onChange={this.handlePasswordChange}/>
+				<button onClick={this.handleLogin}>Login</button>
+				<button onClick={this.handleSignUp}>Sign Up</button>
+			</div>
 		);
 	}
 }

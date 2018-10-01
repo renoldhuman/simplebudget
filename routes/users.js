@@ -10,12 +10,12 @@ router.use(bodyParser.urlencoded({
 }));
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
+router.get('/:userName/:password', function(req, res, next) {
 	// Comment out this line:
   //res.send('respond with a resource');
 
-  var uName = req.body.userName;
-  var pWord = req.body.password;
+  var uName = req.params.userName;
+  var pWord = req.params.password;
 
   console.log(uName + " " + pWord);
 
@@ -23,7 +23,7 @@ router.get('/', function(req, res, next) {
     if(err){
       throw err;s
     }
-    var query = JSON.stringify({username : "flyboy69", password: "yankee99"});
+    var query = JSON.stringify({username : uName, password: pWord});
     var db = client.db("SimpleBudget");
     var user = db.collection('users').find(query).next(function(err, results){
       console.log(results);
