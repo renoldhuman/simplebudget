@@ -1,0 +1,43 @@
+.BalanceCategory {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 20%;
+  padding: 0px;
+  margin: 0px;
+/*  border-style: dashed;*/
+}
+
+
+#total{
+  left: 15%;
+}
+
+#tiedUp{
+  left: 20%;
+}
+
+#discretionary{
+  left: 25%;
+}
+
+.BalanceBox {
+  background-color: blue;
+  opacity: 1.0;
+  height: 75px;
+  padding: 10px;
+  color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+.BalanceTotal{
+  color: white;
+}
+
+.BalanceName{
+  font-size: 1.5em;
+  text-align: left;
+  margin-bottom: 0;
+}
+

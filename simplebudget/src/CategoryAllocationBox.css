@@ -1,0 +1,28 @@
+.CategoryAllocationBox{
+	background-color: white;
+	border-style: solid;
+	z-index: 2;
+	position: absolute;
+	width: 40%;
+	height: 60%;
+	left: 30%;
+	bottom: 3%;
+}
+
+.AllocationControlButtons{
+	border-radius: .5em;
+	border-style: none;
+
+}
+
+.AllocationControlButtons:hover{
+	cursor: pointer;
+}
+
+#finishAllocate{
+	background-color: green;
+}
+
+#cancelAllocate{
+	background-color: red;
+}

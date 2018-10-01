@@ -1,0 +1,5 @@
+.CategoriesContainer{
+	overflow-y: auto;
+	height: 24em;
+	max-height: 24em;
+}

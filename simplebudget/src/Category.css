@@ -1,0 +1,33 @@
+
+
+.CategoryContainer{
+	border-style: solid;
+	border-radius: .5em;
+	border-bottom-width: .5px;
+	border-top-width: .5px;
+	position: relative;
+	width: 70%;
+	display: block;
+  	left: 15%;
+  	margin: 0px;
+	padding: 0px;
+}
+
+.CategoryName{
+	border-style: solid;
+	border: 1px;
+	display: inline-block;
+	width: 75%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.CategoryAlloc{
+	border-style: solid;
+	border: 1px;
+	display: inline-block;
+	width: 25%;
+  	text-align: center;
+  	margin: 0px;
+	padding: 0px;
+}

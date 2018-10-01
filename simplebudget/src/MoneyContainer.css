@@ -1,0 +1,38 @@
+.MoneyContainer{
+	display: block;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.FundButton{
+	display: inline-block;
+
+	border-radius: .5em;
+	border-style: none;
+
+	font-size: 50%;
+
+	width: 9%;
+	height: 100%;
+	padding-top: 2em;
+	padding-bottom: 2em;
+
+
+	position: relative;
+	z-index: 1;
+}
+
+.FundButton:hover{
+	opacity: 1.0;
+	cursor: pointer;
+}
+
+#addMoneyButton{
+	background-color: #cc00cc;
+	left: 37.5%;
+}
+
+#spendMoneyButton{
+	background-color:  #ffff99;
+	left: 44.5%;
+}
